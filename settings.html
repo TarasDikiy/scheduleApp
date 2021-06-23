@@ -1,0 +1,98 @@
+﻿<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Подключение SVG картинок-->
+    <svg display="none">
+      <symbol id="placeholderIcon" viewBox="0 0 512 512">
+        <path  d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"/>
+        <path  d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256C374.626,512,470.793,397.385,470.793,256z"/>
+      </symbol>
+      <symbol id="backIcon" viewBox="0 0 64 64">
+        <path d="m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z"/>
+      </symbol>
+    </svg>
+
+  </head>
+  <body onload="btnActivator(); themeActivator()">
+      <div id="content" class="content">
+          <!-- Блок контента -->
+          <div id="header" class="header">
+              <div onclick="GoBack()">
+                  <svg class="menuSVG">
+                      <use xlink:href="#backIcon"></use>
+                  </svg>
+              </div>
+              <div id="contentHeaderText">
+                  <p class="settings lang" key="settings">Налаштування</p>
+              </div>
+          </div>
+          <div id="settingsField" class="mainField">
+              <div id="settingsList">
+
+                  <div id="settingsListRow2" class="settingsListRow">
+                      <div id="settingsText2" class="settingsText">
+                          <p class="theme lang" key="theme">Нічна тема</p>
+                      </div>
+                      <div id="settingsButton">
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="themeBtn" tabindex="0" onclick="themeControl()">
+                            <label class="onoffswitch-label" for="themeBtn">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div id="settingsListRow4" class="settingsListRow">
+                      <div id="settingsText4" class="settingsText">
+                          <p class="blur lang" key="blur">Блюр</p>
+                      </div>
+                      <div id="blurButtonBox">
+                          <div class="onoffswitch">
+                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="blurBtn" tabindex="0" onclick="blurControl()">
+                              <label class="onoffswitch-label" for="blurBtn">
+                                  <span class="onoffswitch-inner"></span>
+                                  <span class="onoffswitch-switch"></span>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div id="settingsListRow3" class="settingsListRow">
+                      <div id="settingsText3" class="settingsText">
+                          <p class="language lang" key="language">Мова інтерфейсу</p>
+                      </div>
+                      <div id="settingsButton">
+                          <div class="languageDiv">
+                              <button id="en" class="translate" onclick="dis(this.id)">EN</button>
+                          </div>
+                          <div class="languageDiv">
+                              <button id="ua" class="translate" onclick="dis(this.id)">UA</button>
+                          </div>
+                          <div class="languageDiv">
+                              <button id="ru" class="translate" onclick="dis(this.id)">RU</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <button id="debug"  onclick="deleteStorage()" style="margin-top: 60px;">debug</button>
+                  </div>
+
+              </div>
+          </div>
+          <div id="aboutUsReference" class="aboutUsReference">
+              <a href="developers.html" class="about lang" key="about">Про нас</a>
+          </div>
+      </div>
+
+      <!-- Подключения скрипта -->
+      <script src="js/back.js"></script>
+      <script src="js/settings.js"></script>
+      <script src="js/language.js"></script>
+      <script src="js/deleteLocalStorage.js"></script>
+
+  </body>
+</html>
