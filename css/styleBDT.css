@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/*Цветоподборка дефолтной темы*/
+:root {
+    --Headerbackground: #094271;
+    --HeadeColor: white;
+    --headerBorder: black;
+    --menuButtonbackground-color: #515151;
+    --mainFieldbackground-color: #1175c2;
+    --menuSVGfill: white;
+    --mainFieldcolor: white;
+    --mainField_a_color: white;
+    --errorIconfill: #7DCCFC;
+    --menubackground: #094271;
+    --menuCloseBtnfill: white;
+    --menuHeadercolor: white;
+    --menuHeaderbackground-color: #515151;
+    --SVGIconscolor: black;
+    --menuText_a_color: white;
+    --developersFieldbackground-color: #184366;
+    --aboutUsReference_a_color: white;
+    --settingsFieldbackground-color: #1766A4;
+    --theme-buttonColor: #292929;
+    --theme-buttonbackground-color: rgb(136, 166, 221);
+}
+
+/*Цветоподборка темной темы*/
+.dark {
+    --Headerbackground: #3c475a;
+    --HeadeColor: white;
+    --headerBorder: #3a4457;
+    --menuButtonbackground-color: #2d3748;
+    --mainFieldbackground-color: #4a5568;
+    --menuSVGfill: #68a9d1;
+    --mainFieldcolor: white;
+    --mainField_a_color: white;
+    --errorIconfill: #68a9d1;
+    --menubackground: #4f5a6e;
+    --menuCloseBtnfill: white;
+    --menuHeadercolor: white;
+    --menuHeaderbackground-color: #2d3748;
+    --SVGIconscolor: black;
+    --menuText_a_color: white;
+    --developersFieldbackground-color: #4a5568;
+    --aboutUsReference_a_color: white;
+    --settingsFieldbackground-color: #4a5568;
+    --theme-buttonColor: #3f6469;
+    --theme-buttonbackground-color: #68a9d1;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+  /*Стили блока с контентом*/
+.content {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+}
+  .menuButton {
+    background-color: #515151;
+    height: 45px;
+  }
+  .menuSVG {
+    height: 7vw;
+    width: 7vw;
+    fill: white;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+.header {
+    text-align: center;
+    background-color: #094271;
+    color: white;
+    font-size: 4vw;
+    border-top: solid 4px black;
+    border-bottom: solid 4px black;
+
+    /*Тени*/
+    -webkit-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+}
+  .mainField {
+    background-color: #2D9BF0;
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+                                /*Тени*/
+    -webkit-box-shadow: 0px 52px 19px -11px rgba(34, 60, 80, 0.24) inset;
+    -moz-box-shadow: 0px 52px 19px -11px rgba(34, 60, 80, 0.24) inset;
+    box-shadow: 0px 52px 19px -11px rgba(34, 60, 80, 0.24) inset;
+  }
+  .mainField a {
+    color: white;
+    margin-top: 15px;
+  }
+.errorIcon {
+    fill: #7DCCFC;
+    height: 27vw;
+    width: 27vw;
+    margin-bottom: 100px;
+}
+
+  /*Стили блока с меню*/
+  .menuConteiner {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    transition: all 300ms;
+    z-index: 1;
+  }
+.menu {
+    height: 100%;
+    width: 80%;
+    background: #094271;
+    box-shadow: 53px 0px 19px 15px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+  .closeMenu {
+  }
+.menuCloseBtn {
+    height: 6vw;
+    width: 6vw;
+    fill: white;
+    margin-right: 10px;
+}
+  .menuHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #515151;
+    font-size: 4vw;
+    border-bottom: solid 4px black;
+  }
+.headerText {
+    text-transform: uppercase;
+    text-align: center;
+    width: 95%;
+}
+.part {
+    margin-left: 10px;
+    padding: 15px;
+}
+  .menuRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+  }
+.SVGIcons {
+    height: 6vw;
+    width: 6vw;
+    color: black;
+    margin-right: 10px;
+}
+  .menuText a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+  }
+  .placeholder {
+    height: 100%;
+    width: 20%;
+  }
+  /* Стили страницы с настройками*/
+#settingsField {
+    display: unset;
+    font-size: 4vw;
+    padding: 15px;
+    background-color: #1766A4;
+}
+.placeholderIcon {
+    height: 6vw;
+    width: 6vw;
+    fill: red;
+}
+  .settingsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .settingsListRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .aboutUsReference {
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    width: 100%;
+  }
+  .aboutUsReference a {
+    color: white;
+    text-decoration: none;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  /* Стили переключателей в настройках */
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Вкл.";
+    background-color: #094271; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Викл.";
+    padding-right: 10px;
+    background-color: #2D9BF0; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 20px;
+    margin: 5px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 56px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+  /* Стили страницы "О нас"*/
+  #developersField{
+    background-color: #184366;
+    border-top: solid 4px black;
+  }
+  .developersList {
+    font-size: 5vw;
+  }
+  /* Стили страницы с вводом расписания*/
+.addSVG {
+    height: 20vw;
+    width: 20vw;
+}
+.addNewSchedule {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+#stikyDiv {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+#scheduleAddHeader {
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    justify-content: space-between;
+    box-shadow:unset;
+    border-bottom: unset;
+    padding: 10px;
+}
+.weekSliderBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+    padding: 5px;
+    background-color: #094271;
+    border-bottom: solid 4px black;
+}
+#slider {
+    display: unset;
+    z-index: 1;
+}
+.conteinerWeek {
+    
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.dayConteiner {
+    padding: 2px;
+    background-color: #2D9BF0;
+}
+.scheduleRow {
+    display: grid;
+    grid-template-areas:  "lessonTime lessonName roomNumber" "lessonTime prepodName roomNumber";
+    grid-template-columns: 10% 1fr 15%;
+    grid-template-rows:  10vw 10vw;
+}
+#scheduleRow:nth-child(2n+1) {
+    background-color: #83BCF9;
+}
+#lessonTime {
+    grid-area: lessonTime;
+}
+#lessonName {
+    grid-area: lessonName;
+}
+#prepodName {
+    grid-area: prepodName;
+}
+#roomNumber {
+    grid-area: roomNumber;
+}
+.topCell p {
+    font-size: 2vw;
+}
+.cell p{
+    font-size: 2vw;
+}
+#secondWeek, #secondWeekName {
+    display: none;
+}
+.arrowsSVG {
+    height: 6vw;
+    width: 6vw;
+    fill: white;
+}
+.weekSliderBtn p {
+    color: white;
+}
+#leftBtn {
+    fill: grey;
+}
+.scheduleInput {
+    height: 95%;
+    width: 95%;
+    margin-left: 3px;
+}
+.scheduleInput::placeholder {
+    color: #BBBBBB;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+#dayConteinerHeader p {
+    font-size: 4vw;
+    text-align: center;
+}
+.dayConteinerHeader {
+    background-color: #4787D0;
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom: solid 2px #00FFCE;
+}
+.scheduleInput {
+    background-color: inherit;
+    color: white;
+    border: unset;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+#lessonTime {
+    border: solid 1px black;
+    line-height: 2em;
+}
+#lessonName {
+    border: solid 1px black;
+}
+#prepodName {
+    border: solid 1px black;
+}
+#roomNumber {
+    border: solid 1px black;
+    text-align: center;
+}

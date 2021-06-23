@@ -1,0 +1,55 @@
+/*КОНТЕНТ*/
+.item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	list-style: none;
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: var(--mainFieldbackground-color);
+}
+
+	.item p.text {
+		width: 80%;
+		max-width: 80%;
+		font-size: calc(20px + (35 - 20) * ( (100vw - 200px) / ( 1024 - 200) ));
+		background-color: var(--mainFieldbackground-color);
+		color: white;
+	}	
+/*КОНТЕНТ*/
+
+/*Кнопка удаления*/
+	.itemBTN{
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	.frontIc{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+/*Кнопка удаления*/
+
+
+
+
+.BodydisciplineBG{
+	background-color: #3b6c92;
+}
+.disciplineHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #304a5f;
+    color: var(--HeadeColor);
+    font-size: 4vw;
+    border-bottom: solid 2px var(--headerBorder);
+    /*Тени*/
+    -webkit-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+}

@@ -1,0 +1,57 @@
+/*КОНТЕНТ*/
+
+.item {
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: var(--mainFieldbackground-color);
+}
+.phoneEmailLine {
+	color: white;
+	display: flex;
+	font-size: calc(15px + (35 - 15) * ( (100vw - 200px) / ( 1024 - 200) ));
+	background-color: var(--mainFieldbackground-color);
+}
+.item p.text {
+	color: white;
+	padding: 0;
+	margin: 0;
+	font-size: calc(20px + (35 - 20) * ( (100vw - 200px) / ( 1024 - 200) ));
+	background-color: var(--mainFieldbackground-color);
+	width: 100%;
+}
+.phoneEmailLine p {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	width: 40%;
+	white-space: nowrap; /* Отменяем перенос текста */
+	overflow: hidden; /* Обрезаем содержимое */
+	text-overflow: ellipsis;
+}
+.phoneEmailLine a{
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	width:  50%;
+}
+.teachersBGColor{
+	background-color: #3b6c92;
+}
+.teachersHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #304a5f;
+    color: var(--HeadeColor);
+    font-size: 4vw;
+    border-bottom: solid 2px var(--headerBorder);
+    /*Тени*/
+    -webkit-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 19px 5px -5px rgba(34, 60, 80, 0.6);
+}
